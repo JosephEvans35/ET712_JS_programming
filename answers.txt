@@ -28,4 +28,27 @@ Date:   Wed Sep 2 11:48:49 2026 -0400
 
 Lab Part 8 – Make Another Change
 1. Do you see the changes in the remote repository?
+yes, GitHub shows the updated file.
 
+Reflection Questions
+1.	Why is source control important? 
+ Source control keeps a full history of your code changes so you can restore old versions if you mess up.
+
+2.	What is the purpose of a commit? 
+     A commit serves is like a checkpoint in your repository's timeline, 
+  taking a permanent snapshot of your staged files alongside a note explaining what changed.
+
+3.	What is the difference between git add and git commit? 
+     "git add"places your changes into a temporary staging area, 
+    while "git commit" permanently saves those staged changes into the project history
+
+4.	Why do developers use meaningful commit messages? 
+     Clear messages explain the exact reason of a change, 
+     making it much easier for you or your group to navigate project history and fix issues later on.
+
+5.	What happens when you run git push? 
+     It uploads your local commits to a remote server like GitHub so your updated code is backed up.
+
+6.	What would happen if you forgot to commit before pushing? 
+     only sends committed snapshots to GitHub. If you haven't committed your latest changes yet, 
+     Git will report that everything is already up to date, which it wonld not be.
