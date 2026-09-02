@@ -1,0 +1,31 @@
+Lab Part 1 - create a repository
+1. What message appears after running git init?
+Initialized empty Git repository in C:/Users/Instructor/Desktop/lab0_Gitlab/.git/
+
+2. What hidden folder was created?
+The hidden folder was .git 
+
+Lab Part 3 – Check Repository Status
+1. What color is the filename?
+Red
+2. What does "Untracked" mean?
+To ignore a file because it has never been added to the repository's history
+
+Lab Part 4 – Stage Changes
+1. Why do you think Git requires a staging area?
+To have control over which changes get recorded in the repository history
+
+Lab Part 5 – Commit Changes
+1. What is the commit message?
+[master (root-commit) 7b8b415] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+2. What is display after running git log?
+commit 7b8b4156f47f1201bd7febb90b30a8abddf3d75f (HEAD -> master)
+Author: Joseph Evans <Joseph.Evans@login.cuny.edu>
+Date:   Wed Sep 2 11:48:49 2026 -0400
+
+Lab Part 8 – Make Another Change
+1. Do you see the changes in the remote repository?
+
