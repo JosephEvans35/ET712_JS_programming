@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page with Pricing</title>
+  <style>
+    /* --- CSS RESET & VARIABLES --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-light: #f9fafb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+      --border-color: #e5e7eb;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-main);
+      background-color: var(--bg-light);
+      line-height: 1.5;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+      padding: 5rem 1.5rem 6rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      background-color: var(--primary);
+      border: none;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    /* --- PRICING SECTION --- */
+    .pricing-section {
+      padding: 5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .pricing-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-header p {
+      color: var(--text-muted);
+    }
+
+    /* Pricing Grid (Flexbox with responsiveness) */
+    .pricing-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Featured/Popular Card Styling */
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background-color: var(--primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .features-list li {
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .features-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .pricing-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .pricing-card.secondary .btn {
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .pricing-card.secondary .btn:hover {
+      background-color: #eef2ff;
+    }
+
+    /* --- MEDIA QUERIES --- */
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-container">
+      <h1>Build Faster with Modern Solutions</h1>
+      <p>Everything you need to scale your business, launch your projects faster, and reach more customers effortless.</p>
+      <a href="#pricing" class="btn">Get Started Today</a>
+    </div>
+  </header>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-header">
+      <h2>Flexible Pricing Plans</h2>
+      <p>Choose the right plan designed to support you at every stage of growth.</p>
+    </div>
+
+    <div class="pricing-grid">
+      
+      <!-- Basic Plan -->
+      <div class="pricing-card secondary">
+        <h3 class="card-title">Starter</h3>
+        <p class="card-description">Perfect for individuals and small side projects.</p>
+        <div class="price">$19<span>/mo</span></div>
+        <ul class="features-list">
+          <li>1 Project</li>
+          <li>Basic Analytics</li>
+          <li>Community Support</li>
+          <li>1 GB Storage</li>
+        </ul>
+        <a href="#" class="btn">Start Free Trial</a>
+      </div>
+
+      <!-- Pro Plan (Featured) -->
+      <div class="pricing-card featured">
+        <span class="badge">Most Popular</span>
+        <h3 class="card-title">Pro</h3>
+        <p class="card-description">Ideal for growing teams and active startups.</p>
+        <div class="price">$49<span>/mo</span></div>
+        <ul class="features-list">
+          <li>Up to 10 Projects</li>
+          <li>Advanced Analytics</li>
+          <li>Priority Email Support</li>
+          <li>50 GB Storage</li>
+          <li>Custom Domain Integration</li>
+        </ul>
+        <a href="#" class="btn">Get Pro</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card secondary">
+        <h3 class="card-title">Enterprise</h3>
+        <p class="card-description">For large organizations requiring custom scaling.</p>
+        <div class="price">$99<span>/mo</span></div>
+        <ul class="features-list">
+          <li>Unlimited Projects</li>
+          <li>Dedicated Account Manager</li>
+          <li>24/7 Phone & Email Support</li>
+          <li>Unlimited Storage</li>
+          <li>SLA Guarantee</li>
+        </ul>
+        <a href="#" class="btn">Contact Sales</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
