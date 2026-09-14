@@ -1,45 +1,21 @@
-/* General page styling */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
+    /* Background image settings */
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Hero section */
-
-.hero-section {
-    background-color: #f4f8ff;
-    padding: 100px 20px;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
+/* Optional: Adds a slight white overlay to your text sections so they are easy to read over the colorful background */
+.hero-section, .container.my-5 {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.hero-section p {
-    margin-bottom: 30px;
-}
-
-
-/* Cards */
-
-.card {
-    border-radius: 15px;
-}
-
-
-/* AI response */
-
-#assistantResponse {
-    min-height: 50px;
-}
-
-
-/* Footer */
-
-footer {
-    margin-top: 50px;
 }
