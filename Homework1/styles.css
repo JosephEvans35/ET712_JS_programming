@@ -1,0 +1,45 @@
+/* General page styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero section */
+
+.hero-section {
+    background-color: #f4f8ff;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    margin-bottom: 30px;
+}
+
+
+/* Cards */
+
+.card {
+    border-radius: 15px;
+}
+
+
+/* AI response */
+
+#assistantResponse {
+    min-height: 50px;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+}
