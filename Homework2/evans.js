@@ -22,7 +22,7 @@ console.log("\n----Lab Exercise Student Score Analyzer with AI")
 
 let scores = []
 for (let i = 0; i < 5; i++) {
-    scores.push(Number(prompt("Enter Joseph score:")))
+    scores.push(Number(prompt("Enter Student score:")))
     
 }
 
