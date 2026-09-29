@@ -13,8 +13,11 @@ function greeting(name){
     console.log(`Good Afternoon ${name.toUpperCase()}`)
 }
 
-console.log("\n-----example 3: function with parameter")
+//function that print a name. The name is passed to the function
 
+console.log("\n-----example 3: function with parameter")
+//function that prints a message that starts with number 1 all the way up to stopnumber
+//the stopnumber and the message are passed to the function
 function greetcount(msg, stopnumber){
     for(let n = 1; n<=stopnumber ; n++){
         console.log(`${msg} ${n}`)
@@ -22,7 +25,7 @@ function greetcount(msg, stopnumber){
 }
 
 console.log("\n-----example 4: function with parameter")
-
+//function that prints 'snake's eyes if two number are 1
 function snake(n1, n2){
     if(n1===1 && n2 ===1){
         console.log("snake's eyes")
@@ -31,8 +34,8 @@ function snake(n1, n2){
     }
 }
 
-console.log("\n-----example 5: function with parameter")
-
+console.log("\n-----example 5: function that returns value")
+//function tat calculates the area of the square and return the calculate area.
 function areasquare(side){
     console.log("Calculate area of square with side,", side)
     const area = side * side
@@ -40,9 +43,10 @@ function areasquare(side){
     return area
 }
 
-console.log("\n-----example 6: function that returns a ")
-
-
+console.log("\n-----example 6: function that returns a Boolean value")
+//function that return 'true' if the temperature is greater than 75
+//otherwise return 'false'
+//The temperature is passed on to the function
 
 function checktemperature(t){
     if(t>75)
@@ -51,18 +55,19 @@ function checktemperature(t){
         return false
 }
 
-console.log("\n-----example 7: JS Built-in mathFunctions ")
+console.log("\n-----example 7: JS Built-in math Functions ")
 const PI = Math.PI
 console.log(PI)
 console.log(`Round PI = ${Math.round(PI)}`)
 console.log(`ceil PI = ${Math.ceil(PI)}`)
 console.log(`Floor PI = ${Math.floor(PI)}`)
+console.log('power 2^5 = ${Math.pow(2,5)}')
 console.log(`square root of 81 = ${Math.sqrt(81)}`)
 console.log(`random number = ${Math.random()}`)
 console.log(`Return a random number between 1 and 9 ${Math.round(Math.random() * 9)}`)
 
-console.log("\n-----example 8: function with parameter")
-
+console.log("\n-----example 8: Built-in Math function ")
+//function that will randomly pick a color fro an array
 let color =['blue', 'red', 'yellow', 'pink', 'green']
 
 function pickindex(lastindex){
