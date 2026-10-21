@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4</title>
+    <link rel="stylesheet" href="styleevans.css">
+</head>
+<body>
+    <main>
+        <section aria-labelledby="form-heading">
+            <h1 id="form-heading">Form Validation</h1>
+            <form id="signup-form" novalidate>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text">
+                <div class="error" id="name-error" aria-live="polite"></div>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error" id="email-error" aria-live="polite"></div>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                <div class="error" id="password-error" aria-live="polite"></div>
+
+                <button type="submit">Submit</button>
+                <p id="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Card Gallery</h2>
+            <div class="gallery-window" id="gallery-window">
+                <div class="gallery-track">
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/dae8ff/2459a6?text=Mountains" alt="Mountain landscape"><div class="card-content"><h3>Mountains</h3><p>Explore peaceful trails and breathtaking views.</p><button type="button">Learn more</button></div></div></article>
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/dcf5e8/26734d?text=Forest" alt="Green forest"><div class="card-content"><h3>Forest</h3><p>Find calm among tall trees and winding paths.</p><button type="button">Learn more</button></div></div></article>
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/fff0d6/9a5b12?text=Desert" alt="Warm desert landscape"><div class="card-content"><h3>Desert</h3><p>Discover wide horizons beneath sunny skies.</p><button type="button">Learn more</button></div></div></article>
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/d9f1f5/176a7a?text=Ocean" alt="Blue ocean"><div class="card-content"><h3>Ocean</h3><p>Enjoy the rhythm of waves along the coast.</p><button type="button">Learn more</button></div></div></article>
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/f7e2ef/8e416b?text=Garden" alt="Colorful garden"><div class="card-content"><h3>Garden</h3><p>Take in bright flowers and fresh spring air.</p><button type="button">Learn more</button></div></div></article>
+                    <article class="card"><div class="card-inner"><img src="https://placehold.co/400x200/e8e1fa/59418c?text=City" alt="City skyline"><div class="card-content"><h3>City</h3><p>Experience lively streets and local discoveries.</p><button type="button">Learn more</button></div></div></article>
+                </div>
+            </div>
+            <div class="gallery-controls">
+                <button type="button" id="left-button" aria-label="Previous three cards">&lt; Left</button>
+                <button type="button" id="right-button" aria-label="Next three cards">Right &gt;</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="scriptevans.js"></script>
+</body>
+</html>
