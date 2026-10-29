@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers!</title>
+    <link rel="stylesheet" href="num-style.css">
+
+</head>
+<body>
+    
+
+    <script src="num-script.js"></script>
+</body>
+    <main style="max-width: 1000px; margin: 0 auto; padding: 24px; text-align: center; font-family: Arial, sans-serif; color: #3d315b;">
+        <header class="site-header">
+        <div class="header-inner">
+            <p class="brand">🌿 The Curious Classroom</p>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../colors/color.html">Colors Page</a>
+            </nav>
+        </div>
+    </header>
+
+        <section aria-label="Count the animals" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 24px;">
+            <article style="background: #fff0c2; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #e58b00; font-size: 2.5rem; margin: 0;">1</h2><p>one sun</p><div style="font-size: 2rem;">☀️</div>
+            </article>
+            <article style="background: #dff5ff; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #168aad; font-size: 2.5rem; margin: 0;">2</h2><p>two bluebirds</p><div style="font-size: 2rem;">🐦 🐦</div>
+            </article>
+            <article style="background: #e8f7d8; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #5b9b36; font-size: 2.5rem; margin: 0;">3</h2><p>three frogs</p><div style="font-size: 2rem;">🐸 🐸 🐸</div>
+            </article>
+            <article style="background: #ffe2e8; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #dc5474; font-size: 2.5rem; margin: 0;">4</h2><p>four pink pigs</p><div style="font-size: 2rem;">🐷 🐷 🐷 🐷</div>
+            </article>
+            <article style="background: #eee5ff; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #8056bd; font-size: 2.5rem; margin: 0;">5</h2><p>five purple butterflies</p><div style="font-size: 2rem;">🦋 🦋 🦋 🦋 🦋</div>
+            </article>
+            <article style="background: #fff0d9; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #d9822b; font-size: 2.5rem; margin: 0;">6</h2><p>six orange foxes</p><div style="font-size: 2rem;">🦊 🦊 🦊<br>🦊 🦊 🦊</div>
+            </article>
+            <article style="background: #e0f6ee; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #319873; font-size: 2.5rem; margin: 0;">7</h2><p>seven turtles</p><div style="font-size: 2rem;">🐢 🐢 🐢 🐢<br>🐢 🐢 🐢</div>
+            </article>
+            <article style="background: #e8efff; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #5573c7; font-size: 2.5rem; margin: 0;">8</h2><p>eight dolphins</p><div style="font-size: 2rem;">🐬 🐬 🐬 🐬<br>🐬 🐬 🐬 🐬</div>
+            </article>
+            <article style="background: #fff3cc; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #c99a16; font-size: 2.5rem; margin: 0;">9</h2><p>nine bees</p><div style="font-size: 2rem;">🐝 🐝 🐝<br>🐝 🐝 🐝<br>🐝 🐝 🐝</div>
+            </article>
+            <article style="background: #ffe7dc; border-radius: 18px; padding: 16px;">
+                <h2 style="color: #df6942; font-size: 2.5rem; margin: 0;">10</h2><p>ten ladybugs</p><div style="font-size: 2rem;">🐞 🐞 🐞 🐞 🐞<br>🐞 🐞 🐞 🐞 🐞</div>
+            </article>
+        </section>
+
+        <footer style="margin-top: 24px; font-size: 1.2rem;">
+            <p>🌈 Great counting! Which animal is your favorite? 🌈</p>
+        </footer>
+    </main>
+    <script>
+        const cards = document.querySelectorAll('[aria-label="Count the animals"] article');
+        let currentCard = 0;
+
+        cards.forEach((card, index) => {
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Number ${index + 1}; click to continue`);
+
+            const nextCard = () => {
+                if (currentCard >= cards.length - 1) return;
+                cards[currentCard].style.display = 'none';
+                currentCard++;
+                cards[currentCard].style.display = 'block';
+                cards[currentCard].focus();
+            };
+
+            card.addEventListener('click', nextCard);
+            card.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    nextCard();
+                }
+            });
+        });
+    </script>
+
+    <footer>
+	<p>&copy; 2026 Joseph Evans. All rights reserved.</p>
+</footer>
+</body>
+</html>

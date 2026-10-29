@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <link rel="stylesheet" href="style-color.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="brand">🌿 The Curious Classroom</p>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../numbers/num.html">Number Page</a>
+            </nav>
+        </div>
+    </header>
+    <main class="color-picker" aria-live="polite">
+        <h1>Sliding Rainbow</h1>
+        <p class="color-name" id="colorName">Red</p>
+        <label for="rainbowSlider">Slide the pointer to choose a color</label>
+        <input class="rainbow-slider" id="rainbowSlider" type="range" min="0" max="9" step="1" value="0" aria-valuetext="Red">
+        <div class="rainbow-labels" aria-hidden="true">
+            <span style="color:#ff3b30;">Red</span>
+            <span style="color:#ff7a00;">Orange</span>
+            <span style="color:#ffd700;">Yellow</span>
+            <span style="color:#2ecc40;">Green</span>
+            <span style="color:#1e90ff;">Blue</span>
+            <span style="color:#4b0082;">Indigo</span>
+            <span style="color:#8a2be2;">Violet</span>
+            <span style="color:#ff4fa3;">Pink</span>
+            <span style="color:#8b4513;">Brown</span>
+            <span style="color:#000000;">Black</span>
+        </div>
+        <p class="hint">The page background changes to match the selected color; the header stays unchanged.</p>
+    </main>
+
+    <footer>
+	<p>&copy; 2026 Joseph Evans. All rights reserved.</p>
+</footer>
+
+    <script src="script-color.js"></script>
+</body>
+</html>

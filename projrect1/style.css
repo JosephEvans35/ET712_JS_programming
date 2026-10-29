@@ -127,3 +127,26 @@
             height: 100%; 
             object-fit: contain;
         }
+        .subject-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 0;
+            border-radius: 999px;
+            background: #ff9f43;
+            color: #fff;
+            font: 700 1rem/1.2 Arial, sans-serif;
+            text-decoration: none;
+            box-shadow: 0 4px 0 #d97706;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .subject-btn:hover {
+            background: #f08a22;
+            box-shadow: 0 2px 0 #d97706;
+            transform: translateY(2px);
+        }
+
+        .subject-btn:focus-visible {
+            outline: 3px solid #2563eb;
+            outline-offset: 3px;
+        }

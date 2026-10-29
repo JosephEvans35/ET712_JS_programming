@@ -1,0 +1,153 @@
+:root { 
+    --ink: #19332f; 
+    --muted: #58716a; 
+    --green: #245c4b; 
+    --cream: #f6f7ed; 
+}
+        * { 
+            box-sizing: border-box; 
+        }
+        body { 
+            margin: 0; 
+            min-height: 100vh; 
+            color: var(--ink); 
+            background: radial-gradient(ellipse at top left, #e1efda, transparent 48%), 
+            var(--cream); 
+            font-family: "Segoe UI", Arial, sans-serif; 
+        }
+        .site-header { 
+            padding: 1.25rem clamp(1rem, 5vw, 4rem); 
+            color: white; 
+            background: linear-gradient(120deg, #193e36, #36745a); 
+            box-shadow: 0 5px 18px #19332f24; 
+        }
+        .header-inner { 
+            max-width: 1150px; 
+            margin: auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 1.5rem; 
+            flex-wrap: wrap; 
+        }
+        .brand { 
+            margin: 0; 
+            font-size: 1.35rem; 
+            letter-spacing: .04em; 
+        }
+        .site-nav { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: .55rem; 
+        }
+        .site-nav a {
+             padding: .65rem .95rem; 
+             border: 1px solid #ffffff70; 
+             border-radius: 999px; 
+             color: white; 
+             font-weight: 650; 
+             text-decoration: none; 
+             transition: background .2s, color .2s, transform .2s; 
+            }
+        .site-nav a:hover, .site-nav a:focus-visible { 
+            color: var(--green); 
+            background: white; 
+            transform: translateY(-2px); 
+        }
+        main { 
+            width: min(1150px, calc(100% - 2rem)); 
+            margin: auto; 
+            padding: 3rem 0 4rem; 
+        }
+        .intro { 
+            max-width: 680px; 
+            margin: 0 auto 2.25rem; 
+            text-align: center; 
+        }
+        .eyebrow { 
+            color: var(--green); 
+            font-size: .78rem; 
+            font-weight: 800; 
+            letter-spacing: .16em; 
+            text-transform: uppercase; 
+        }
+        h1 { 
+            margin: .45rem 0 .65rem; 
+            font-size: clamp(2rem, 5vw, 3.2rem); 
+        }
+        .intro p { 
+            margin: 0; 
+            color: var(--muted); 
+            line-height: 1.65; 
+        }
+        .animal-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); 
+            gap: 1.15rem; 
+        }
+        .animal-card { 
+            overflow: hidden; 
+            border: 1px solid #dfe8d8; 
+            border-radius: 18px; 
+            background: #fffefa; 
+            box-shadow: 0 8px 22px #19332f0d; 
+            transition: transform .2s, box-shadow .2s; 
+        }
+        .animal-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 14px 28px #19332f1c; 
+        }
+        .card-top { 
+            min-height: 112px; 
+            display: grid; 
+            place-items: center; 
+            background: linear-gradient(135deg, #e8f2de, #f8edcf); 
+            font-size: 3.6rem; 
+        }
+        .card-content { 
+            padding: 1.1rem 1.2rem 1.3rem; 
+        }
+        .card-content h2 { 
+            margin: 0 0 .3rem; 
+            font-size: 1.25rem; 
+        }
+        .animal-type { 
+            margin: 0 0 .8rem; 
+            color: var(--green); 
+            font-size: .82rem; 
+            font-weight: 750; 
+        }
+        .fact { 
+            margin: 0; 
+            color: var(--muted); 
+            font-size: .95rem; 
+            line-height: 1.55; 
+        }
+        .fact strong { 
+            color: var(--ink); 
+        }
+        .animal-card {
+            cursor: pointer;
+        }
+
+        .animal-card:focus-visible {
+            outline: 3px solid #2f7250;
+            outline-offset: 4px;
+        }
+
+        .animal-card.animal-moving {
+            animation: animal-move 650ms ease-in-out;
+        }
+
+        @keyframes animal-move {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            20% { transform: translateY(-12px) rotate(-5deg); }
+            40% { transform: translateY(2px) rotate(5deg); }
+            60% { transform: translateY(-7px) rotate(-3deg); }
+            80% { transform: translateY(0) rotate(2deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animal-card.animal-moving { animation-duration: 1ms; }
+        }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
