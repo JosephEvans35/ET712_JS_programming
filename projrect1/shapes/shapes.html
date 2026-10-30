@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <link rel="stylesheet" href="shapes-style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="brand">🌿 The Curious Classroom</p>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../colors/color.html">Colors</a>
+                <a href="../animals/animals.html">Animals</a>
+                <a href="../numbers/num.html">Numbers</a>
+            </nav>
+        </div>
+    </header>
+    <main class="shape-lesson">
+        <h1>🌼 Shape Search! 🌼</h1>
+        <p class="shape-intro">Shapes are swooshing around the garden! Find and click the shape shown below.</p>
+        <section class="shape-game" aria-label="Find the matching shape game">
+            <h2>Find the shape</h2>
+            <p class="target-line">Look for: <span id="target-art" aria-hidden="true">●</span> <strong id="target-name">Circle</strong></p>
+            <div id="shape-field" role="group" aria-label="Moving shapes"></div>
+            <p id="game-status" role="status" aria-live="polite">Find the matching shape!</p>
+            <button type="button" id="new-round">New shapes</button>
+        </section>
+    </main>
+    <script src="shapes-script.js"></script>
+
+    <footer>
+        <p>&copy; 2026 Joseph Evans. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

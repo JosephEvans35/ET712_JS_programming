@@ -1,0 +1,162 @@
+.site-header { 
+            padding: 1.25rem clamp(1rem, 5vw, 4rem); 
+            color: white; 
+            background: linear-gradient(120deg, #193e36, #36745a); 
+            box-shadow: 0 5px 18px #19332f24; 
+        }
+        .header-inner { 
+            max-width: 1150px; 
+            margin: auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 1.5rem; 
+            flex-wrap: wrap; 
+        }
+        .brand { 
+            margin: 0; 
+            font-size: 1.35rem; 
+            letter-spacing: .04em; 
+        }
+        .site-nav { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: .55rem; 
+        }
+        .site-nav a {
+             padding: .65rem .95rem; 
+             border: 1px solid #ffffff70; 
+             border-radius: 999px; 
+             color: white; 
+             font-weight: 650; 
+             text-decoration: none; 
+             transition: background .2s, color .2s, transform .2s; 
+            }
+        .site-nav a:hover, .site-nav a:focus-visible { 
+            color: var(--green); 
+            background: white; 
+            transform: translateY(-2px); 
+        }
+         body { 
+            margin: 0; 
+            min-height: 100vh; 
+            color: #263b32; 
+            background: #f5faef; 
+            font-family: Arial, sans-serif; 
+        }
+        .site-header { 
+            padding: 14px 5%; 
+            background: #e4f1dc; 
+        }
+        .header-inner { 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 12px; 
+            max-width: 1100px; 
+            margin: auto; 
+        }
+        .brand { 
+            margin: 0; 
+            font-weight: bold; 
+        }
+        .site-nav { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 18px; 
+        }
+        .site-nav a { 
+            color: #294d3a; 
+        }
+        .shape-lesson { 
+            width: min(1000px, 92%); 
+            margin: 28px auto; 
+            text-align: center; 
+        }
+        h1 { 
+            color: #315d43; 
+        }
+        .shape-game { 
+            padding: 22px; 
+            border-radius: 22px; 
+            background: white; 
+            box-shadow: 0 8px 26px #284b2818; 
+        }
+        .target-line { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 12px; 
+            font-size: 1.3rem; 
+        }
+        #target-art { 
+            display: inline-block; 
+            font-size: 3rem; 
+        }
+        #shape-field { 
+            position: relative; 
+            height: min(55vh, 430px); 
+            min-height: 300px; 
+            overflow: hidden; 
+            border: 3px dashed #b4d2a4; 
+            border-radius: 20px; 
+            background: #f4faee; 
+        }
+        .moving-shape { 
+            position: absolute; 
+            width: 58px; 
+            height: 58px; 
+            border: 0; 
+            border-radius: 50%; 
+            background: #ffffffd9; 
+            font-size: 2.5rem; 
+            cursor: pointer; 
+            animation: drift var(--speed) ease-in-out infinite alternate; 
+            animation-delay: var(--delay); 
+        }
+        .moving-shape:hover, .moving-shape:focus-visible { 
+            z-index: 1; 
+            background: #fff1bd; 
+            transform: scale(1.2); 
+            outline: 3px solid #477d53; 
+        }
+        .moving-shape.found { 
+            animation-play-state: paused; 
+            background: #d7f0d2; 
+        }
+        @keyframes drift { 
+            from {
+                 translate: -12px -10px; 
+                 rotate: -12deg; 
+                }
+                 to { 
+                    translate: 12px 10px;
+                     rotate: 12deg; 
+                    } }
+        #game-status { 
+            min-height: 1.5em; 
+            font-weight: bold; 
+            color: #315d43; 
+        }
+        #new-round { 
+            padding: 11px 20px; 
+            border: 0; 
+            border-radius: 999px; 
+            background: #477d53; 
+            color: white; 
+            font: inherit; 
+            font-weight: bold; 
+            cursor: pointer; 
+        }
+        #new-round:hover { 
+            background: #315d43; 
+        }
+        footer { 
+            padding: 16px; 
+            text-align: center; 
+        }
+        @media (prefers-reduced-motion: reduce) { 
+            .moving-shape { 
+                animation: none; 
+            } }
