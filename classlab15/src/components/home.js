@@ -1,5 +1,5 @@
 import React from 'react'
-import imdog from '../image/dog.jpg'
+import imdog from '../images/imgdog.jpg'
 
 const Home = function(){
     return(<>
@@ -9,7 +9,7 @@ const Home = function(){
 
         <main className = "maincontainer">
             <div>
-                <img src = {imdog} />
+                <img src = {imgdog} />
             </div>
             </main>
         </>

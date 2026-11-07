@@ -9,7 +9,7 @@ const Navbars = function(){
             <a href="https://www.qcc.cuny.edu/" target = "blank" className ="link">QCC</a>
         </div>
         <div className = "btngroup">
-            <button><Link to = '/contact>Contact Us</Link></button>
+            <button><Link to = '/contact'>Contact Us</Link></button>
             <button><Link to = '/'>Home</Link></button>
         </div>
         </nav>
