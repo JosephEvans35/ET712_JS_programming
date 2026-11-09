@@ -338,3 +338,23 @@ body {
   box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
   transition: all 0.3s ease-in-out;
 }
+/* Card Container relative positioning for Badge */
+.book-card {
+  position: relative;
+}
+
+/* Category Badge Styling */
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
