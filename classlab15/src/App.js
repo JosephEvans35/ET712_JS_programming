@@ -7,19 +7,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   const username = "user123";
-  return (
-    <>
+  return (<>
       <div className="App">
         <BrowserRouter>
           <Navbars />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/contact' element={<Contact />} />
-          </Routes>
+          
         </BrowserRouter>
       </div>
-
-      <div id="root"></div>
 
       <div className="App">
         <h1 style={{color: "darkblue", textAlign: "center"}}>Joseph Evans</h1>

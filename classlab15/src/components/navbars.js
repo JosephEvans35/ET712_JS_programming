@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 const Navbars = function(){
     return(<>
-    <hearder className>
+        <hearder className>
         <nav className ="navbar">
         <div>
             <a href="https://www.qcc.cuny.edu/" target = "blank" className ="link">QCC</a>
@@ -13,8 +13,7 @@ const Navbars = function(){
             <button><Link to = '/'>Home</Link></button>
         </div>
         </nav>
-        </hearder>)
-      </>
-    )
+        </hearder>
+      </>)
 }
 export default Navbars

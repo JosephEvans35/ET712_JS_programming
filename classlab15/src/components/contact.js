@@ -1,6 +1,6 @@
 import React from "react"
 
-const contact = function(){
+const Contact = function(){
     return(
         <>
         <Header classname ="hearder">
@@ -10,4 +10,4 @@ const contact = function(){
     )
 }
 
-export default contact;
+export default Contact
