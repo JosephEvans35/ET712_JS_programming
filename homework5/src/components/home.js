@@ -1,7 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [highlightedId, setHighlightedId] = useState(null);
+
   const featuredBooks = [
     {
       id: 1,
@@ -26,13 +30,45 @@ function Home() {
     }
   ];
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const query = searchTerm.trim().toLowerCase();
+
+    // Check if the input matches any of the 3 book titles
+    const matchedBook = featuredBooks.find(
+      (book) => book.title.toLowerCase() === query
+    );
+
+    if (matchedBook) {
+      setHighlightedId(matchedBook.id);
+      // Optional: Clear highlight after 3 seconds
+      setTimeout(() => setHighlightedId(null), 3000);
+    } else {
+      // Redirect to NotFound page using React Router
+      navigate('/not-found');
+    }
+  };
+
   return (
     <div className="home-container">
-      {/* Hero Banner Section */}
+      {/* Hero Banner Section with Search Bar */}
       <header className="hero-banner">
         <div className="hero-content">
-          <h1>Welcome to Joe-Turners</h1>
-          <p>Discover your next favorite story. Explore our vast collection of classic and contemporary books.</p>
+          <h1>Welcome to PageTurners</h1>
+          <p>Discover your next favorite story. Search our featured collection below!</p>
+          
+          {/* Search Form */}
+          <form onSubmit={handleSearch} className="search-form">
+            <input
+              type="text"
+              placeholder="Search book title (e.g., 1984)..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            <button type="submit" className="search-btn">Search</button>
+          </form>
+
           <Link to="/about" className="cta-button">Learn More About Us</Link>
         </div>
       </header>
@@ -42,7 +78,10 @@ function Home() {
         <h2>Featured Books</h2>
         <div className="book-grid">
           {featuredBooks.map((book) => (
-            <div key={book.id} className="book-card">
+            <div 
+              key={book.id} 
+              className={`book-card ${highlightedId === book.id ? 'highlighted-card' : ''}`}
+            >
               <img src={book.image} alt={book.title} className="book-image" />
               <div className="book-info">
                 <h3>{book.title}</h3>
