@@ -107,7 +107,7 @@ function Home() {
       {/* Hero Banner Section */}
       <header className="hero-banner">
         <div className="hero-content">
-          <h1>Welcome to PageTurners</h1>
+          <h1>Welcome to Joe-Turners</h1>
           <p>Explore our expanded collection of classics, fantasy, and modern masterpieces!</p>
           
           {/* Search Form */}
