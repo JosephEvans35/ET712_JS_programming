@@ -8,18 +8,18 @@ const User = function(props) {
         <>
           <section className='card'>
             <a><img src={props.image}/></a>
+
             <div className='content'>
               <a className='author'>{props.username}</a>
             </div>
 
-             
              <div className='metadatea'>
                 <p>Posted on <span className='date'>{props.date}</span></p>
-                </div>
+             </div>
 
-                <div className='comments'>
+             <div className='comments'>
                     <p><i>{props.msg}</i></p>
-                </div>
+             </div>
           </section>
         </>
     )
